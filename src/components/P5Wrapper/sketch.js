@@ -16,7 +16,7 @@ export default function sketch(p) {
     p.ellipse(p.width / 2, p.height / 2, props.slider);
 
     if ((p.frameCount / p.round(p.frameRate())) % 2 === 0) {
-      props.getValue(p.frameRate());
+      props.getValue(p.frameRate().toFixed(3));
     }
   }
 }
