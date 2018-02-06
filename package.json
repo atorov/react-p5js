@@ -1,0 +1,35 @@
+{
+  "name": "react-p5js",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [
+    "react",
+    "reactjs",
+    "p5",
+    "p5js",
+    "p5.js",
+    "processing"
+  ],
+  "homepage": "https://github.com/atorov/react-p5js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atorov/react-p5js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atorov/react-p5js/issues"
+  },
+  "author": "atorov",
+  "license": "MIT",
+  "main": "src/index.js",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
