@@ -1,6 +1,8 @@
 
 # Using React with p5.js
 
+![alt application screenshot](https://raw.githubusercontent.com/atorov/react-p5js/master/public/img/screeshot.png)
+
 This project demonstrates the possibility of combining React and p5.js.
 
 [React](https://reactjs.org/) is one of the most popular JavaScript libraries for creating single page applications.<br>
