@@ -30,6 +30,11 @@ export default class App extends Component {
           <big><strong>{this.state.value}</strong></big>
           &nbsp;fps
         </p>
+        <p style={{ textAlign: "center" }}>
+          <a href="https://github.com/atorov/react-p5js">
+            <img border="0" alt="github logo" src="/img/github-logo.png" width="auto" height="28px" style={{ verticalAlign: "middle" }}/>
+          </a>
+        </p>
       </div>
     );
   }
