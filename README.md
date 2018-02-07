@@ -8,6 +8,8 @@ This project demonstrates the possibility of combining React and p5.js.
 [React](https://reactjs.org/) is one of the most popular JavaScript libraries for creating single page applications.<br>
 [p5.js](https://p5js.org/) is a JavaScript library with a full set of drawing functionality.
 
+Check the online version [here](http://react-p5js.surge.sh/).
+
 The basic idea is that the p5.js sketch is wrapped in a React component. The data that comes into the sketch is passed on to this component as props. Callbacks are used to return information back from the sketch to the application.
 
 A much more advanced example, built on the same concept, can be found [here](https://github.com/atorov/fractal-tree-simulator).

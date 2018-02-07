@@ -1,6 +1,6 @@
 {
   "name": "react-p5js",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Using React with p5.js",
   "keywords": [
     "react",
@@ -10,7 +10,7 @@
     "p5.js",
     "processing"
   ],
-  "homepage": "https://github.com/atorov/react-p5js",
+  "homepage": ".",
   "repository": {
     "type": "git",
     "url": "https://github.com/atorov/react-p5js.git"
