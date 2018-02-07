@@ -1,6 +1,6 @@
 {
   "short_name": "react-p5js",
-  "name": "ReactJS and p5.js Boilerplate",
+  "name": "Using React with p5.js",
   "icons": [
     {
       "src": "favicon.ico",
