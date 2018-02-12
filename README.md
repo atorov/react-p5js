@@ -79,7 +79,7 @@ This project setup supports code splitting via [dynamic `import()`](http://2alit
 [React Router](https://reacttraining.com/react-router/) is the most popular option.
 [Redux](https://redux.js.org/) is a predictable state container for JavaScript apps.
 
-React Router and Redux лесно могат да бъдат добавени към проекта.
+React Router and Redux can easily be added to the project.
 
 ## Running Tests
 
