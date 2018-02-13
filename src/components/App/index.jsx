@@ -4,17 +4,23 @@ import P5Wrapper from "../P5Wrapper/";
 export default class App extends Component {
   constructor() {
     super();
-    this.state = { slider: 100, value: null };
+    this.state = { status: "", slider: 100, value: null };
   }
 
   getValue = (value) => this.setState({ value });
+
+  onReady = () => this.setState({ status: "ready" });
 
   onSliderChange = (event) => this.setState({ slider: +event.target.value });
 
   render() {
     return (
       <div className="app">
-        <P5Wrapper p5Props={{ slider: this.state.slider }} getValue={this.getValue} />
+        <P5Wrapper
+          p5Props={{ slider: this.state.slider }}
+          getValue={this.getValue}
+          onReady={this.onReady}
+        />
         <div style={{ textAlign: "center" }}>
           <strong>{this.state.slider}</strong>
           <br />

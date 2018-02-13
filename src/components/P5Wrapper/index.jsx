@@ -6,15 +6,24 @@ class P5Wrapper extends Component {
   static propTypes = {
     p5Props: PropTypes.object.isRequired,
     getValue: PropTypes.func.isRequired,
+    onReady: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
     this.canvas = new window.p5(sketch, "app-p5_container");
-    setTimeout(() => this.canvas.pushProps({ ...this.props.p5Props, getValue: this.props.getValue }), 100);
+    this.canvas.setOnReady(this.props.onReady);
   }
 
   componentWillReceiveProps(nextProps) {
     this.canvas.pushProps({ ...this.props.p5Props, getValue: this.props.getValue });
+  }
+
+  shouldComponentUpdate() { // just in case :)
+    return false;
+  }
+
+  componentWillUnmount() {
+    this.canvas.remove();
   }
 
   render() {
