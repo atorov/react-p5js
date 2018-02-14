@@ -1,28 +1,30 @@
-export default function sketch(s) {
+export default function (p) {
   let onReady = () => {};
   let props = {};
 
-  s.setOnReady = function(cb) {
+  p.setOnReady = function(cb) {
     onReady = cb;
   };
 
-  s.pushProps = function (_props) {
+  p.pushProps = function (_props) {
     props = _props;
   }
 
-  s.setup = function() {
-    s.createCanvas(800, 300);
+  p.setup = function() {
+    p.createCanvas(900, 300);
+    console.log("::: displayDensity:", p.displayDensity());
+    console.log("::: pixelDensity:", p.pixelDensity());
     onReady();
   }
 
-  s.draw = function() {
-    s.background(127, 0, 50);
-    s.noStroke();
-    s.fill(127, 255, 205);
-    s.ellipse(s.width / 2, s.height / 2, props.slider);
+  p.draw = function() {
+    p.background(127, 0, 50);
+    p.noStroke();
+    p.fill(127, 255, 205);
+    p.ellipse(p.width / 2, p.height / 2, props.slider);
 
-    if ((s.frameCount / s.round(s.frameRate())) % 3 === 0) {
-      props.getValue(s.frameRate().toFixed(1));
+    if ((p.frameCount / p.round(p.frameRate())) % 3 === 0) {
+      props.getValue(p.frameRate().toFixed(1));
     }
   }
 }
