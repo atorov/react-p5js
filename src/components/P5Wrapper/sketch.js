@@ -1,30 +1,21 @@
-export default function (p) {
-    let onReady = () => {}
-    let props = {}
+export default function (s) {
+    s.props = {}
+    s.onSetAppState = () => {}
 
-    p.setOnReady = function(cb) {
-        onReady = cb
+    s.setup = function() {
+        s.createCanvas(900, 300)
+        console.log('::: displayDensity:', s.displayDensity())
+        console.log('::: pixelDensity:', s.pixelDensity())
     }
 
-    p.pushProps = function (_props) {
-        props = _props
-    }
+    s.draw = function() {
+        s.background(127, 0, 50)
+        s.noStroke()
+        s.fill(127, 255, 205)
+        s.ellipse(s.width / 2, s.height / 2, s.props.slider)
 
-    p.setup = function() {
-        p.createCanvas(900, 300)
-        console.log('::: displayDensity:', p.displayDensity())
-        console.log('::: pixelDensity:', p.pixelDensity())
-        onReady()
-    }
-
-    p.draw = function() {
-        p.background(127, 0, 50)
-        p.noStroke()
-        p.fill(127, 255, 205)
-        p.ellipse(p.width / 2, p.height / 2, props.slider)
-
-        if ((p.frameCount / p.round(p.frameRate())) % 3 === 0) {
-            props.getValue(p.frameRate().toFixed(1))
+        if ((s.frameCount / s.round(s.frameRate())) % 3 === 0) {
+            s.onSetAppState({ frameRate: s.frameRate().toFixed(1) })
         }
     }
 }

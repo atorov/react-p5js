@@ -6,14 +6,12 @@ export default class App extends Component {
     constructor() {
         super()
         this.state = {
-            status: '',
-            slider: 100, value: null,
+            slider: 100,
+            frameRate: null,
         }
     }
 
-    getValue = (value) => this.setState({ value })
-
-    onReady = () => this.setState({ status: 'ready' })
+    onSetAppState = (newState, cb) => this.setState(newState, cb)
 
     onSliderChange = (event) => this.setState({ slider: +event.target.value })
 
@@ -22,8 +20,7 @@ export default class App extends Component {
             <>
                 <P5Wrapper
                     p5Props={{ slider: this.state.slider }}
-                    getValue={this.getValue}
-                    onReady={this.onReady}
+                    onSetAppState={this.onSetAppState}
                 />
 
                 <div style={{ textAlign: 'center' }}>
@@ -40,7 +37,7 @@ export default class App extends Component {
 
                 <p style={{ textAlign: 'center' }}>
                     Sketch frame rate:&nbsp;
-                    <big><strong>{this.state.value}</strong></big>
+                    <big><strong>{this.state.frameRate}</strong></big>
                     &nbsp;fps
                 </p>
 
