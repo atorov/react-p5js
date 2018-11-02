@@ -1,39 +1,41 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import sketch from "./sketch.js";
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-class P5Wrapper extends Component {
-  static propTypes = {
-    p5Props: PropTypes.object.isRequired,
-    getValue: PropTypes.func.isRequired,
-    onReady: PropTypes.func.isRequired,
-  };
+import sketch from './sketch.js'
 
-  componentDidMount() {
-    this.canvas = new window.p5(sketch, "app-p5_container");
-    this.canvas.setOnReady(this.props.onReady);
-  }
+export default class P5Wrapper extends Component {
+    static propTypes = {
+        p5Props: PropTypes.object.isRequired,
+        getValue: PropTypes.func.isRequired,
+        onReady: PropTypes.func.isRequired,
+    }
 
-  componentWillReceiveProps(nextProps) {
-    this.canvas.pushProps({ ...this.props.p5Props, getValue: this.props.getValue });
-  }
+    componentDidMount() {
+        this.canvas = new window.p5(sketch, 'app-p5_container')
+        this.canvas.setOnReady(this.props.onReady)
+    }
 
-  shouldComponentUpdate() { // just in case :)
-    return false;
-  }
+    componentWillReceiveProps(nextProps) {
+        this.canvas.pushProps({
+            ...this.props.p5Props,
+            getValue: this.props.getValue,
+        })
+    }
 
-  componentWillUnmount() {
-    this.canvas.remove();
-  }
+    shouldComponentUpdate() { // just in case :)
+        return false
+    }
 
-  render() {
-    return (
-      <div
-        id="app-p5_container"
-        style={{ width: "100%", textAlign: "center" }}
-      />
-    );
-  }
+    componentWillUnmount() {
+        this.canvas.remove()
+    }
+
+    render() {
+        return (
+            <div
+                id="app-p5_container"
+                style={{ width: "100%", textAlign: "center" }}
+            />
+        );
+    }
 }
-
-export default P5Wrapper;
