@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import sketch from './sketch.js'
+import sketch1 from './sketch1'
 
 export default class P5Wrapper extends Component {
     static propTypes = {
@@ -10,24 +10,24 @@ export default class P5Wrapper extends Component {
     }
 
     componentDidMount() {
-        this.canvas = new window.p5(sketch, 'p5-container')
-        this.canvas.props = this.props.p5Props
-        this.canvas.onSetAppState = this.props.onSetAppState
+        this.canvas1 = new window.p5(sketch1, 'canvas1-container')
+        this.canvas1.props = this.props.p5Props
+        this.canvas1.onSetAppState = this.props.onSetAppState
     }
 
     shouldComponentUpdate(nextProps) {
-        this.canvas.props = nextProps.p5Props
+        this.canvas1.props = nextProps.p5Props
         return false
     }
 
     componentWillUnmount() {
-        this.canvas.remove()
+        this.canvas1.remove()
     }
 
     render() {
         return (
             <div
-                id="p5-container"
+                id="canvas1-container"
                 style={{ width: "100%", textAlign: "center" }}
             />
         )
