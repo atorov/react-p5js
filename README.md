@@ -3,13 +3,14 @@
 
 ![alt application screenshot](https://raw.githubusercontent.com/atorov/react-p5js/master/public/img/screeshot.png)
 
-![alt application screencast](https://raw.githubusercontent.com/atorov/react-p5js/master/public/img/screencast.gif)
-
 This project demonstrates the possibility of combining React and p5.js.
 
 ---
 
 **UPDATE 2018-11-09:**
+
+![alt application screencast](https://raw.githubusercontent.com/atorov/react-p5js/master/public/img/screencast.gif)
+
 
 - Updated: Synchronized with new ReactJS lifecycle methods;
 - Updated: Improved and simplified communication between main React app and p5 sketches;
