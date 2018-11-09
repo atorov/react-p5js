@@ -3,6 +3,8 @@
 
 ![alt application screenshot](https://raw.githubusercontent.com/atorov/react-p5js/master/public/img/screeshot.png)
 
+![alt application screencast](https://raw.githubusercontent.com/atorov/react-p5js/master/public/img/screencast.gif)
+
 This project demonstrates the possibility of combining React and p5.js.
 
 ---
