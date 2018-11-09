@@ -5,6 +5,17 @@
 
 This project demonstrates the possibility of combining React and p5.js.
 
+---
+
+**UPDATE 2018-11-09:**
+
+- Updated: Synchronized with new ReactJS lifecycle methods;
+- Updated: Improved and simplified communication between main React app and p5 sketches;
+- New feature: Multiple independent P5 on the same page;
+- New feature: Sketch code splitting into separate files.
+
+---
+
 [React](https://reactjs.org/) is one of the most popular JavaScript libraries for creating single page applications.<br>
 [p5.js](https://p5js.org/) is a JavaScript library with a full set of drawing functionality.
 
