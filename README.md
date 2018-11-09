@@ -7,12 +7,11 @@ This project demonstrates the possibility of combining React and p5.js.
 
 ---
 
-**UPDATE 2018-11-09:**
+**UPDATE 2018-11-09 (v0.3):**
 
-![alt application screencast](https://raw.githubusercontent.com/atorov/react-p5js/master/public/img/screencast.gif)
+![alt application screen cast](https://raw.githubusercontent.com/atorov/react-p5js/master/public/img/screencast.gif)
 
-
-- Updated: Synchronized with new ReactJS lifecycle methods;
+- Updated: Synchronized with the new React (16.3+) lifecycle methods;
 - Updated: Improved and simplified communication between main React app and p5 sketches;
 - New feature: Multiple independent P5 on the same page;
 - New feature: Sketch code splitting into separate files.

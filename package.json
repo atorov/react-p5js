@@ -1,6 +1,6 @@
 {
   "name": "react-p5js",
-  "version": "0.3.0-snapshot",
+  "version": "0.3.0",
   "description": "Using React with p5.js",
   "keywords": [
     "react",
