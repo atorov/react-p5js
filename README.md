@@ -1,14 +1,15 @@
 
+### UPDATE 2019-04-21
+
+An example, build on the same concept but using the latest React features such as **hooks and context**), can be found [here](https://github.com/atorov/react-hooks-p5js)
+
+---
+
 # Using React with p5.js
 
 ![alt application screenshot](https://raw.githubusercontent.com/atorov/react-p5js/master/public/img/screeshot.png)
 
 This project demonstrates the possibility of combining React and p5.js.
-
----
-**UPDATE 2019-04-21:**
-
-An examples, build on the same concept but using the latest React features such as **hooks and context**), can be found [here](https://github.com/atorov/react-hooks-p5js)
 
 ---
 
