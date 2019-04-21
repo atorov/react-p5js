@@ -6,7 +6,7 @@
 This project demonstrates the possibility of combining React and p5.js.
 
 ---
-***UPDATE 2019-04-21***
+**UPDATE 2019-04-21:**
 
 An examples, build on the same concept but using the latest React features such as **hooks and context**), can be found [here](https://github.com/atorov/react-hooks-p5js)
 
